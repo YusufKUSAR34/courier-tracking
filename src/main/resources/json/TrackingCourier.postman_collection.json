@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "2154f774-6c01-430c-b7ad-7f90007a3be2",
+		"name": "TrackingCourier",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Store",
+			"item": [
+				{
+					"name": "create-store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"yusufmigrosmagaza\",\r\n    \"lat\" : 40.8548234,\r\n    \"lng\" : 26.6321290\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/store/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"store",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CourierGeolocation",
+			"item": [
+				{
+					"name": "report",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":800420,\r\n    \"courierId\" : 30683,\r\n    \"lat\" : 41.0366851,\r\n    \"lng\" : 28.6952262\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/courier-geolocation/report",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"courier-geolocation",
+								"report"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "total-travel-distance",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/courier-geolocation/total-travel-distance/30683",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"courier-geolocation",
+								"total-travel-distance",
+								"30683"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
