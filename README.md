@@ -4,6 +4,9 @@ This project is a restful web application with Java and Spring Boot. In this pro
 This project calculates the total distance traveled by couriers.
 
 **Database**
+- I used h2 database
+
+**Database json files**
 - src/main/resources/json/courier-geolocations.json
 - src/main/resources/json/courier.json
 - src/main/resources/json/stores.json
